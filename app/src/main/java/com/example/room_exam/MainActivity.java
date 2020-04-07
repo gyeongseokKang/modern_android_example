@@ -1,12 +1,15 @@
 package com.example.room_exam;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.Observer;
 import androidx.room.Room;
 
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
     private EditText mTodoEditText;
@@ -24,14 +27,15 @@ public class MainActivity extends AppCompatActivity {
                 .allowMainThreadQueries() //메인쓰레드에서 db가 가능도록 하는것. 실무에서는 백그라운드에서 동작해야함
                 .build();
 
-        mResultTextView.setText(db.todoDao().getAll().toString() );
+        //UI 갱신
+        db.todoDao().getAll().observe(this, todos -> {
+            mResultTextView.setText(todos.toString() );
+        });
 
-        findViewById(R.id.add_button).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                db.todoDao().insert(new Todo(mTodoEditText.getText().toString()) );
-                mResultTextView.setText(db.todoDao().getAll().toString() );
-            }
+        //버튼 클릭시 DB에 insert
+        findViewById(R.id.add_button).setOnClickListener(v -> {
+            db.todoDao().insert(new Todo(mTodoEditText.getText().toString()) );
+
         });
     }
 }
