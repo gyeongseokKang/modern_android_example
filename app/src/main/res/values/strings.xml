@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">room_exam</string>
+
+    <string name="facebook_application_id">658367411390381</string>
+    <string name="fb_login_protocol_scheme">fb658367411390381</string>
+
 </resources>

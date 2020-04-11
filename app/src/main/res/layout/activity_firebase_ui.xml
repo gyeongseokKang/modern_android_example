@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.room_exam.MainViewModel" />
+    </data>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/firebase_ui_auth_btn"
+        android:layout_width="207dp"
+        android:layout_height="49dp"
+        android:text="인증"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.302" />
+
+    <CheckBox
+        android:id="@+id/checkBox_facebook"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:text="FaceBook"
+        app:layout_constraintTop_toBottomOf="@+id/firebase_ui_auth_btn"
+        tools:layout_editor_absoluteX="102dp" />
+
+    <CheckBox
+        android:id="@+id/checkBox_google"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="google"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox_facebook"
+        tools:layout_editor_absoluteX="102dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1063941781506",
+    "firebase_url": "https://roomexam-32524.firebaseio.com",
+    "project_id": "roomexam-32524",
+    "storage_bucket": "roomexam-32524.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1063941781506:android:876dd8a17ac7cad0ef8f1b",
+        "android_client_info": {
+          "package_name": "com.example.room_exam"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1063941781506-lq2ndqooj4764me8e2iku8m6c8q9018e.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.room_exam",
+            "certificate_hash": "f28864b3e752ce2fb53ec1e9001a22dfe31f9253"
+          }
+        },
+        {
+          "client_id": "1063941781506-1piiqdq5rcgsj1r3ld3sjo1tj8ssq7b0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAruZqwD7oQSY2g4OujkKugD8JP6CTrICo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1063941781506-1piiqdq5rcgsj1r3ld3sjo1tj8ssq7b0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
