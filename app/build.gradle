@@ -37,8 +37,7 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.1.0'
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
 
-    //FireBase Analytics
-    implementation 'com.google.firebase:firebase-core:16.0.4'
+
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
@@ -48,6 +47,9 @@ dependencies {
     def lifecycle_version = "2.0.0"
     //noinspection GradleDependency
     implementation "androidx.lifecycle:lifecycle-extensions:$lifecycle_version"
+
+    //FireBase Analytics
+    implementation 'com.google.firebase:firebase-core:17.3.0'
 
     //Firebase Authentication
     implementation 'com.google.firebase:firebase-auth:19.3.0'

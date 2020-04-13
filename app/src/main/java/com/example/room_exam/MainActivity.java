@@ -2,31 +2,27 @@ package com.example.room_exam;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
-import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModel;
 import androidx.lifecycle.ViewModelProviders;
-import androidx.room.Room;
 
 import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.Signature;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Base64;
 import android.util.Log;
-import android.view.View;
-import android.widget.EditText;
-import android.widget.TextView;
 
-import com.example.room_exam.authentication.FirebaseUIActivity;
+import com.example.room_exam.firebase.analytics.FAnalytics;
+import com.example.room_exam.firebase.authentication.FirebaseUIActivity;
 import com.example.room_exam.databinding.ActivityMainBinding;
+import com.google.firebase.analytics.FirebaseAnalytics;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
-import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
+
+    private FAnalytics mFAnalytics =null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,14 +35,20 @@ public class MainActivity extends AppCompatActivity {
 
         binding.setViewModel(viewModel);
 
+        mFAnalytics = new FAnalytics();
+        mFAnalytics.initFirebaseAnalytics(this);
+
         //firebase 인증
         binding.authBottom.setOnClickListener(v -> {
+            mFAnalytics.sendLogEvent("id_test","name_test");
             Intent intent = new Intent(this, FirebaseUIActivity.class);
             startActivity(intent);
         });
 
-        getHashKey();
+
+        //getHashKey();
     }
+
     private void getHashKey(){
         PackageInfo packageInfo = null;
         try {

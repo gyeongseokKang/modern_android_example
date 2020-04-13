@@ -1,4 +1,4 @@
-package com.example.room_exam.authentication;
+package com.example.room_exam.firebase.authentication;
 
 import android.content.Intent;
 import android.os.Bundle;
