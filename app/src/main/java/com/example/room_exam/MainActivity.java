@@ -40,11 +40,14 @@ public class MainActivity extends AppCompatActivity {
 
         //firebase 인증
         binding.authBottom.setOnClickListener(v -> {
-            mFAnalytics.sendLogEvent("id_test","name_test");
+            mFAnalytics.sendLogEvent("click_test","id_test","name_test");
             Intent intent = new Intent(this, FirebaseUIActivity.class);
             startActivity(intent);
         });
 
+        binding.addButton.setOnClickListener(v -> {
+            mFAnalytics.sendLogEvent("click_test","id_test2","name_test2");
+        });
 
         //getHashKey();
     }

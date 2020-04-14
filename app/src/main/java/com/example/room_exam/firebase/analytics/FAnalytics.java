@@ -20,10 +20,10 @@ public class FAnalytics {
     }
 
 
-    public void sendLogEvent(String id, String name){
+    public void sendLogEvent(String event_message ,String id, String name){
         Bundle bundle = new Bundle();
         bundle.putString(FirebaseAnalytics.Param.ITEM_ID,  id);
         bundle.putString(FirebaseAnalytics.Param.ITEM_NAME,  name);
-        mFirebaseAnalytics.logEvent("fire_log_test",bundle);
+        mFirebaseAnalytics.logEvent(event_message,bundle);
     }
 }
