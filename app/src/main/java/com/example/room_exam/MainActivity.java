@@ -49,6 +49,11 @@ public class MainActivity extends AppCompatActivity {
             mFAnalytics.sendLogEvent("click_test","id_test2","name_test2");
         });
 
+        binding.btnRxandroid.setOnClickListener(v -> {
+            Intent intent = new Intent(this, RxandroidActivity.class);
+            startActivity(intent);
+        });
+
         //getHashKey();
     }
 

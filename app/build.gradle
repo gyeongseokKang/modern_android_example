@@ -57,4 +57,11 @@ dependencies {
     implementation 'com.facebook.android:facebook-login:5.9.0'
     // Firebase UI
     implementation 'com.firebaseui:firebase-ui-auth:4.3.2'
+
+    //RxAndroid
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.7'
+
+    implementation 'com.trello.rxlifecycle2:rxlifecycle-android:2.1.0'
+
 }
