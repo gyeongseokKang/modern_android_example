@@ -4,4 +4,5 @@
 ### 2. ViewModel
 ### 3. RX programming
 ### 4. Firebase 
+### 5. Kotlin
 #### firebase - remote config, login, analytisic
