@@ -6,4 +6,4 @@
 ### 4. Firebase 
 ### 5. Kotlin
 ### 6. Dagger
-#### firebase - remote config, login, analytisic
+#### firebase - remote config, login, analytisic, crashistic
